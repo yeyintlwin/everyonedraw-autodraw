@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Everyone Draw ပုံဆွဲအကူ",
+  "version": "1.0.0",
+  "minimum_chrome_version": "111",
+  "description": "ပုံကို everyonedraw canvas ပေါ်မှာ overlay နဲ့ပြပြီး ကိုယ်တိုင်ဆွဲဖို့ လမ်းပြတယ်။ အလိုအလျောက် ဆွဲမယ်။",
+  "content_scripts": [
+    {
+      "matches": ["https://everyonedraw.com/*"],
+      "js": ["core.js", "site.js", "overlay.js", "panel.js"],
+      "run_at": "document_idle",
+      "world": "MAIN"
+    }
+  ]
+}
